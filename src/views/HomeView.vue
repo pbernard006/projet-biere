@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import Title from "../components/Title.vue";
+import SearchBar from "../components/SearchBar.vue";
+import List from "../components/List.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Title />
+    <SearchBar />
+    <List beers="coucou" />
   </main>
 </template>
