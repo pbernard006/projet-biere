@@ -1,13 +1,12 @@
 <script setup>
-import Title from "../components/Title.vue";
-import SearchBar from "../components/SearchBar.vue";
-import List from "../components/List.vue";
+import Title from "../components/title.vue";
+import axios from "axios";
+import Beers from "../components/Beers.vue";
 </script>
 
 <template>
   <main>
     <Title />
-    <SearchBar />
-    <List beers="coucou" />
+    <Beers />
   </main>
 </template>

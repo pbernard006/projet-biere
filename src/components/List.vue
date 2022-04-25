@@ -1,23 +1,15 @@
 <script>
-import axios from "axios";
 export default {
-  props: ["beers"],
+  props: ["data"],
+
   data() {
-    return {
-      data: null,
-    };
-  },
-  mounted() {
-    axios
-      .get("https://api.punkapi.com/v2/beers")
-      .then((response) => (this.data = response.data));
+    return {};
   },
 };
 </script>
 
 <template>
   <div class="container">
-    {{ beers }}
     <div class="row" v-if="data != null">
       <div class="col-3 px-2 py-2" v-for="beer in data" :key="beer.id">
         <div class="card text-center">
