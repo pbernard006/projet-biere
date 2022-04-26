@@ -1,12 +1,11 @@
 <script setup>
-import Title from "../components/title.vue";
-import axios from "axios";
-import Beers from "../components/Beers.vue";
+import Title from "../components/Title.vue";
+import List from "../components/List.vue";
+
+
 </script>
 
 <template>
-  <main>
     <Title />
-    <Beers />
-  </main>
+    <List />
 </template>
