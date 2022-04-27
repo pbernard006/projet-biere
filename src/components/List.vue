@@ -37,7 +37,7 @@ axios
     <input type="text" v-model="input" v-on:keyup.enter="searchInAPI" />
     <div class="row" v-if="data != null">
       <div class="col-3 px-2 py-2" v-for="beer in data" :key="beer.id">
-        <a v-bind:href="'/biere/' + beer.id" >
+        <a v-bind:href="'/#/biere/' + beer.id" >
         <div class="card text-center">
           <img :src="beer.image_url" class="img text-center" />
           <p>{{ beer.name }}</p>
