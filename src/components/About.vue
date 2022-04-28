@@ -23,15 +23,15 @@ export default {
 
 <template>
   <div v-if="biere != null">
-    <div class="row">
+    <div class="row text-center mt-4">
       <div class="col-6">
         <ImageBiere :source="biere" />
       </div>
       <div class="col-6">
         <TitleBiere :title="biere" />
         <DescriptionBiere :description="biere" />
+        <IngredientsBiere :ingredients="biere" />
       </div>
-      <IngredientsBiere :ingredients="biere" />
     </div>
   </div>
 </template>

@@ -5,5 +5,7 @@ export default {
 };
 </script>
 <template>
-  <p v-if="description != null">{{ description[0].description }}</p>
+  <p class="mt-4" v-if="description != null">
+    {{ description[0].description }}
+  </p>
 </template>

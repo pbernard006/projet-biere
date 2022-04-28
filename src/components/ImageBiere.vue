@@ -5,7 +5,7 @@ export default {
 };
 </script>
 <template>
-  <img :src="source[0].image_url" class="img" v-if="source != null" />
+  <img :src="source[0].image_url" class="w-25" v-if="source != null" />
 </template>
 <style>
 .img {

@@ -5,5 +5,5 @@ export default {
 };
 </script>
 <template>
-  <p v-if="title != null">{{ title[0].name }}</p>
+  <h1 class="fw-bold" v-if="title != null">{{ title[0].name }}</h1>
 </template>
