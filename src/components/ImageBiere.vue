@@ -1,19 +1,15 @@
 <script>
 import axios from "axios";
 export default {
-    data(){
-        return {
-            id: null,
-            biere: null
-        }
-    },
-    mounted(){
-        this.id = this.$route.params.id ;
-        axios.get("https://api.punkapi.com/v2/beers/" + this.id)
-        .then((response) => (this.biere = response.data));
-    }
-}
+  props: ["source"],
+};
 </script>
 <template>
-    <p v-if="biere != null">{{biere[0].image_url}}</p>
+  <img :src="source[0].image_url" class="img" v-if="source != null" />
 </template>
+<style>
+.img {
+  height: 200px;
+  width: auto;
+}
+</style>

@@ -1,19 +1,15 @@
 <script>
 import axios from "axios";
 export default {
-    data(){
-        return {
-            id: null,
-            biere: null
-        }
-    },
-    mounted(){
-        this.id = this.$route.params.id ;
-        axios.get("https://api.punkapi.com/v2/beers/" + this.id)
-        .then((response) => (this.biere = response.data));
-    }
-}
+  props: ["ingredients"],
+};
 </script>
 <template>
-    <p v-if="biere != null">{{biere[0].ingredients}}</p>
+  <p>Ingrédients :</p>
+  <p
+    v-for="ingredient in ingredients[0].ingredients.malt"
+    :key="ingredient.name"
+  >
+    {{ ingredient.name }}
+  </p>
 </template>
